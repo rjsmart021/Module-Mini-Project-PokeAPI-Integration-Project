@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon Fetch</title>
-</head>
-<body>
-    <h1>Pokémon Data</h1>
-    <input type="text" id="pokemonName" placeholder="Enter Pokémon name">
-    <button onclick="fetchPokemon()">Fetch Pokémon</button>
-    <div id="pokemonData"></div>
+    <head>
+       
+        <title>Pokemon Search</title>
+        <link href="pokemon.css" rel="stylesheet"/>
+    
+    </head>
+    <body>
+        <div id="section">
+            <header>
+                <p><h1>Pokemon Search</h1></p>
+            </header>
+            <div id="info">
+                <div id="main">
+                    <a>Pokemon ID:</a>
+                    <br>
+                    <input type="text" class="info" id="PokeID" maxlength="75" size="50"/>
+                    <img id="picture" src="">
+                    <br><br>
+                    <a>Name:</a>
+                    <br>
+                    <input type="text" class="info" id="Name" maxlength="75" size="50"/>
+                    <br><br>
+                    <a>Height:</a>
+                    <br>
+                    <input type="text" class="info" id="Height" maxlength="75" size="50"/>
+                    <br><br>
+                    <a>Weight:</a>
+                    <br>
+                    <input type="text" class="info" id="Weight" maxlength="75" size="50"/>
+                    <br><br>
+                    <br><br>
+                </div>
+                <div id="image">
+                    <a></a>
+                    <br>
+                    <div id="buttons">
+                        <input type="button" id="prevButton" class="Button" value="Previous" onclick="previousButton();"/>
+                        <input type="button" id="getButton" class="Button" value="Retrieve" onclick="getDataAsync();"/>
+                        <input type="button" id="nextButton" class="Button" value="Next" onclick="nextButton();"/>
+                    </div>
+                </div>
+            </div>  
+        </div>
 
-    <script src="script.js"></script>
-</body>
+        <script src="Pokemon.js"></script>
+    </body>
 </html>
